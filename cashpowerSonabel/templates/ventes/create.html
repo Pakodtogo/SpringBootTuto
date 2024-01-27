@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content  %}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0">Interface des ventes</h1>
+        </div><!-- /.col -->
+        
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+
+  <!-- Main content -->
+  <div class="content">
+    <div class="container-fluid">
+      <!-- Small boxes (Stat box) -->
+      <div class="row">
+
+        <div class="card-body">
+          <form method="post">
+          {% csrf_token %}
+          {{form.as_p}}
+          <button type="submit" class="btn btn-primary">Valider</button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

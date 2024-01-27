@@ -8,7 +8,7 @@
   <div class="container-fluid">
     <div class="row mb-2">
       <div class="col-sm-6">
-        <h1>Liste des abonnements</h1>
+        <h1>Liste des Ventes effectués</h1>
       </div>
      
     </div>
@@ -22,7 +22,7 @@
       <div class="col-12">
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title">Abonnements</h3>
+            <h3 class="card-title">Ventes réaliseés</h3>
 
             <div class="card-tools">
               <div class="input-group input-group-sm" style="width: 150px;">
@@ -41,24 +41,30 @@
             <table class="table table-hover text-nowrap">
               <thead>
                 <tr>
-                  <th> N°_Abonnment</th>
-                  <th>Compteur</th>
-                  <th>Tarif</th>
-                  <th>Date de Création</th>
-                  <th>Etat Abonne</th>
+                  <th>Montant</th>
+                  <th>TQR</th>
+                  <th>Taxe DE</th>
+                  <th>Taxe Télé</th>
+                  <th>TVA</th>
+                  <th>Cout d'énergie</th>
+                  <th>Energie payé</th>
+                  <th>Code Token</th>
                   <th>Actions</th>
                 </tr>
               </thead>
               <tbody>
-                {% for item in abonnements %}
+                {% for item in ventes %}
                 <tr>
-                  <td>{{item.numero_abonnement}}</td>
-                  <td>{{item.compteur}}</td>
-                  <td>{{item.tarif}}</td>
-                  <td>{{item.date_creation}}</td>
-                  <td><span class="badge badge-success">{{item.etat_abonnement}}</span></td>
+                  <td>{{item.montant}}</td>
+                  <td>{{item.tqr}}</td>
+                  <td>{{item.tde}}</td>
+                  <td>{{item.tsdaae}}</td>
+                  <td>{{item.tva}}</td>
+                  <td>{{item.cout_energie}}</td>
+                  <td>{{item.energie_paye}}</td>
+                  <td>{{item.code_token}}</td>
                   <td>
-                    <a href="{% url 'abonnement_detail' pk=item.pk %}">
+                    <a href="#">
                     <button type="button" class="btn btn-primary">Détails</button>
                     </a>
                   </td>

@@ -1,0 +1,12 @@
+/* static/css/custom_admin_styles.css */
+
+.field-numero_compteur, .field-modele_compteur, .field-mode_facturation, .field-numero_carte {
+    background-color: rgb(0, 255, 238) !important;
+    font-size: large;
+}
+
+
+
+
+
+

@@ -28,7 +28,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Accueil</a>
+        <a href="{% url 'home' %}" class="nav-link">Accueil</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -69,13 +69,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <span class="dropdown-header">15 Notifications</span>
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item">
-            <i class="fas fa-envelope mr-2"></i> 4 new messages
+            <i class="fas fa-envelope mr-2"></i> 4 nouveaux messages
             <span class="float-right text-muted text-sm">3 mins</span>
           </a>
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item">
             <i class="fas fa-users mr-2"></i> 8 friend requests
-            <span class="float-right text-muted text-sm">12 hours</span>
+            <span class="float-right text-muted text-sm">12 heures</span>
           </a>
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item">
@@ -98,7 +98,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="{% url 'home' %}" class="brand-link">
       <img src="{% static 'dist/img/Sonabel.png' %}" alt="SONABEL Logo" class="brand-image img-circle elevation-4" style="opacity: .8">
       <span class="brand-text font-weight-light">SONABEL</span>
     </a>
@@ -111,7 +111,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <img src="{% static 'dist/img/user2-160x160.jpg' %}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">PAKODTOGO Joël</a>
+          <a href="#" class="d-block">Utilisateur</a>
         </div>
       </div>
 
@@ -125,7 +125,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           
-            <a href="#" class="nav-link active">
+            <a href="{% url 'home' %}" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 <strong>TABLEAU DE BORD</strong>
@@ -134,7 +134,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
             <li class="nav-item">
               <a href="#" class="nav-link ">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <i class="nav-icon fas fa-subscript"></i>
               <p>
                 <strong>ABONNEMENTS</strong>
                 <i class="right fas fa-angle-left"></i>
@@ -142,13 +142,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="abonnements/create" class="nav-link">
+                <a href="{% url 'abonnement_create' %}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Créer</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="abonnements/" class="nav-link">
+                <a href="{% url 'abonnement_list' %}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Liste</p>
                 </a>
@@ -170,7 +170,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
             <li class="nav-item">
               <a href="#" class="nav-link ">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <i class="nav-icon fas fa-money-bill-alt"></i>
                 <p>
                   <strong>VENTES D'UNITES</strong>
                   <i class="right fas fa-angle-left"></i>
@@ -178,13 +178,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="#" class="nav-link">
+                  <a href="{% url 'vente_create' %}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Nouvelle Vente</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link">
+                  <a href="{% url 'vente_list' %}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Liste</p>
                   </a>
@@ -252,7 +252,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Points de Vents</p>
+                  <p>Points de Ventes</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -267,7 +267,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon far fa-user"></i>
               <p>
                 <strong>DECONNEXION</strong>
               </p>
