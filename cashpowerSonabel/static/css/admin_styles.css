@@ -1,7 +1,9 @@
 /* static/css/admin_styles.css */
 
 /* Changer la couleur du fond */
-
+body{
+  background-color: aqua;
+}
 :root {
     --primary: #1f3a1a;
     --secondary: #323a1a;
@@ -9,4 +11,5 @@
     --primary-fg: white;
     --header-color: white;
     --darkened-bg: white;
+    --body-bg: aqua;
   }
